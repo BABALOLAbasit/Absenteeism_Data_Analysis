@@ -1,51 +1,45 @@
 # ABSENTEEISM DATA ANALYSIS
 
-## Table of Contents
-
-- [Project Overview](#project-overview)
-- [Data Sources](#data-sources)
-- [Tools](#tools)
-- [Data Cleaning and Preparation](#data-cleaning-and-preparation)
-- [Model Selection](#model-selection)
-- [Conclsion](#conclusion)
-- [Limitations](#limitations)
-
 ### Project Overview
 
-The objective of this project is to build a sentiment analysis model to clasify product reviews as psitive, negative, or neutral.
-The goal is to automatically analyze and categorize customer feedback to help business understand customer sentiment and improve product offerings.
+This project focuses on analyzing absenteeism data to predict future absenteeism using logistic regression. The analysis involves extensive data preprocessing, including data cleaning, manipulation, transformation, and module generation, ensuring the dataset is suitable for accurate predictive modeling.
 
-### Data Sources
+### Data Preprocessing
 
-Amazon Product Review: The primary dataset used for this project is the "Amazon-Product-Reviews - Amazon Product Review (1).csv" file, containing detailed information on reviews given by customers who have purchased products from the Amazon website.
+#### Data Cleaning
 
-  -[Download here](https://www.kaggle.com/datasets/miriamodeyianypeter/sentiment-analysis-amazon-product-reviews)
+Date Transformation: Utilized datetime functions to extract and transform 'date' information into meaningful features such as months and days.
 
-### Tools
+Dummy Variable Creation: Converted categorical variables, specifically the reasons for absenteeism, into dummy variables to enhance model performance.
 
-- Jupyter Notebook - Data Cleaning and Preparation - Text Cleaning and Preprocessing  - Model Training and Evaluation
+#### Data Manipulation
 
-### Data Cleaning and Preparation
+Variable Selection: Identified and selected relevant variables critical to predicting absenteeism.
 
-In the initial data preparation phase, i perform the following tasks:
-1. Importation of all the neccessary libraries
-2. Data loading and inspection
-3. Selected important variables for the data processing
-4. Handling missing and duplicate values
-5. Data cleaning and formating
-6. Text cleaning and preprocessing
-7. Data splitting into Training and Testing 
-8. Label encoding
+Feature Engineering: Created new features from existing data to improve model accuracy.
 
-### Model Selection
+Scaling: Applied scaling techniques to standardize data ranges.
 
-#### Model training and evaluation
-- This is done using:
-  1. Logistic Regression with Hyperparameter & Countvectorizer
-  2. Naive-Bays Model with Hyperparameters & Countvectorizer
-  3. Logistic Regression with Hyperparameter & TfidfVectorizer
-  4. Naive-Bays Model with Hyperparameters & TfidfVectorizer
+#### Data Transformation
+
+Categorical Encoding: Encoded categorical variables into numerical values using one-hot encoding for better model interpretation.
+
+Date and Time Feature Extraction: Extracted features from date and time data, such as day of the week, month to capture temporal patterns in absenteeism.
+
+### Module Generation
+
+Data Pipeline Creation: Developed a data pipeline to automate data preprocessing steps for efficient and reproducible analysis.
+
+Function Library: Created a library of reusable functions for data cleaning, manipulation, and transformation tasks.
+
+### Model Generation
+
+#### Logistic Regression Model
+
+Model Training: Trained a logistic regression model using the preprocessed dataset to predict absenteeism.
+
+Model Evaluation: Achieved training and testing accuracy of 78% and 74%, respectively.
 
 ### Conclusion
 
-- The best model chosen for the project is LogisticRegression with Hyperparameter(C=10) and Countvectorizer (with a train and test accuracy of 86% and 82% respectively
+This project provides a comprehensive approach to absenteeism data analysis, emphasizing the importance of thorough data preprocessing. The logistic regression model developed through this analysis offers valuable insights and accurate predictions of absenteeism, aiding in better resource planning and management.
